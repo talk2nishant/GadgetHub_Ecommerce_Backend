@@ -9,17 +9,17 @@ const bodyParser = require('body-parser')
 require('dotenv').config()
 console.log('hello',process.env);
 
-connectdb()
+connectdb()   
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-
+  
 
 app.get('/admin/*', (req, res) => {
   res.send('Hello World!')
   res.end();
 })
-
+ 
 app.listen(port, () => {
   console.log(`app listening on port ${port}`)
 })   
